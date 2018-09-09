@@ -1,0 +1,25 @@
+{
+  "name": "jorisgriffioen.nl",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "author": "Joris Griffioen",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "node-sass": "^4.9.3",
+    "parcel-plugin-clean-dist": "^0.0.6",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "scripts": {
+    "watch": "parcel index.html",
+    "build": "parcel build index.html"
+  }
+}
