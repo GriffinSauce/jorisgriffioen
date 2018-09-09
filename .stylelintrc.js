@@ -14,8 +14,10 @@ module.exports = {
 
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
     "order/properties-order": [
-      "flex-wrap",
       "display",
+      "flex-wrap",
+      "justify-content",
+      "align-items",
       "position",
       "top",
       "bottom",
