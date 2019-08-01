@@ -122,6 +122,24 @@ nav {
   }
 }
 
+a.cs,
+a.la {
+  background-position: 50% 50%;
+  background-size: cover;
+}
+a.cs:hover {
+  background-image: url('./vid-cs.webp');
+}
+a.la:hover {
+  background-image: url('./vid-la.webp');
+} 
+
+/* preload */
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+   content: url('./vid-cs.webp') url('./vid-la.webp');
+}
+
 @media (min-width: 992px) {
   nav {
     width: 600px;
