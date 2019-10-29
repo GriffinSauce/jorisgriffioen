@@ -67,6 +67,10 @@ export default () => (
         width: calc(100% - 60px);
       }
 
+      a.la img {
+        margin: 20px 0;
+      }
+
       a.cs,
       a.la {
         background-position: 50% 50%;

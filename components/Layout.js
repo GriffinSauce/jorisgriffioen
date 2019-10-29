@@ -61,8 +61,7 @@ export default ({ children }) => (
     {children}
     <style jsx global>{`
       html,
-      body,
-      img {
+      body {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -93,6 +92,12 @@ export default ({ children }) => (
 
       h1 {
         font-size: 3rem;
+      }
+
+      img {
+        margin: 0;
+        padding: 0;
+        width: 100%;
       }
 
       a {
