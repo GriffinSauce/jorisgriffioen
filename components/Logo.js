@@ -5,11 +5,7 @@ const colorLogo = theme.color1;
 
 export default () => (
   <>
-    <svg
-      className="logo"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 97 82"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 82">
       <path
         className="logo-1"
         d="M60.35000022888184,8.810000000000002 c16.32,-3.23 13.76,3 13.76,3 a23,23 0 0 1 -2.29,0.81 C69.10000022888184,9.64 60.35000022888184,8.810000000000002 60.35000022888184,8.810000000000002 z"
@@ -180,11 +176,6 @@ export default () => (
       />
     </svg>
     <style jsx>{`
-      .logo {
-        margin: 50px 0 15px 0;
-        width: 150px;
-      }
-
       .logo-1 {
         fill: ${colorLogo};
       }

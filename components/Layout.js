@@ -58,7 +58,10 @@ export default ({ children }) => (
       />
       <link rel="shortcut icon" href="icons/favicon.ico" />
     </Head>
+
     {children}
+    <footer>Griffin artwork by Evelien Griffioen</footer>
+
     <style jsx global>{`
       html,
       body {
@@ -103,6 +106,12 @@ export default ({ children }) => (
       a {
         color: #fff;
         text-decoration: none;
+      }
+
+      footer {
+        margin: 30px 0;
+        font-size: 0.7rem;
+        color: ${theme.color4};
       }
     `}</style>
   </>

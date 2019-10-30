@@ -4,19 +4,19 @@ export default () => (
   <>
     <nav>
       <a target="_blank" href="https://github.com/GriffinSauce">
-        <img src="icon-github.svg" />
+        <img alt="github" src="icon-github.svg" />
         <div>Github</div>
       </a>
       <a target="_blank" href="https://twitter.com/jorisgriffioen">
-        <img src="icon-twitter.svg" />
+        <img alt="twitter" src="icon-twitter.svg" />
         <div>Twitter</div>
       </a>
       <a target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
-        <img src="icon-linkedin.svg" />
+        <img alt="linkedin" src="icon-linkedin.svg" />
         <div>LinkedIn</div>
       </a>
       <a target="_blank" href="https://instagram.com/jorisjgriffioen">
-        <img src="icon-instagram.svg" />
+        <img alt="instagram" src="icon-instagram.svg" />
         <div>Instagram</div>
       </a>
       <a
@@ -24,11 +24,11 @@ export default () => (
         target="_blank"
         href="https://www.coralsprings.nl/"
       >
-        <img src="icon-coralsprings.svg" />
+        <img alt="Coral Springs" src="logo-coralsprings.svg" />
         <div>Coral Springs - pop punk</div>
       </a>
       <a className="large la" target="_blank" href="https://www.leftalive.nl/">
-        <img src="icon-leftalive.svg" />
+        <img alt="Left Alive" src="logo-leftalive.svg" />
         <div>Left Alive - pop punk</div>
       </a>
     </nav>

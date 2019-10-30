@@ -6,20 +6,21 @@ import theme from '../theme';
 
 const Home = () => (
   <Layout>
-    <Logo />
-
     <header>
+      <Logo />
       <h1>Joris Griffioen</h1>
       <p>Developer, guitarist.</p>
     </header>
 
     <Nav />
 
-    <p className="art-credit">Griffin artwork by Evelien Griffioen</p>
-
     <style jsx>{`
       header {
         margin: 0 0 50px 0;
+      }
+      header :global(svg) {
+        margin: 50px 0 15px 0;
+        width: 150px;
       }
       header h1,
       header p {
@@ -28,12 +29,6 @@ const Home = () => (
 
       header p {
         font-size: 1.4rem;
-      }
-
-      .art-credit {
-        margin-top: 30px;
-        font-size: 0.7rem;
-        color: ${theme.color4};
       }
     `}</style>
   </Layout>
