@@ -117,6 +117,17 @@ const Home = () => (
         width: 80vw;
         height: calc(80vw / 1.7777777);
       }
+
+      @media (min-width: 768px) {
+        section {
+          margin: 100px 0 200px 0;
+        }
+
+        nav img {
+          margin: 15px 30px;
+          width: 50px;
+        }
+      }
     `}</style>
   </Layout>
 );
