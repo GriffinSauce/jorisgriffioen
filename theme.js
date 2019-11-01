@@ -5,4 +5,6 @@ export default {
   color3: '#3cedf7',
   color4: '#2aa4ab',
   color5: '#702aab',
+  fontPrimary: "'Oswald', sans-serif",
+  fontSecondary: "'Montserrat', sans-serif",
 };

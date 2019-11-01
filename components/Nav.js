@@ -3,31 +3,58 @@ import theme from '../theme';
 export default () => (
   <>
     <nav>
-      <a target="_blank" href="https://github.com/GriffinSauce">
+      <a
+        className="block"
+        target="_blank"
+        href="https://github.com/GriffinSauce"
+      >
         <img alt="github" src="icon-github.svg" />
         <div>Github</div>
       </a>
-      <a target="_blank" href="https://twitter.com/jorisgriffioen">
+      <a
+        className="block"
+        target="_blank"
+        href="https://twitter.com/jorisgriffioen"
+      >
         <img alt="twitter" src="icon-twitter.svg" />
         <div>Twitter</div>
       </a>
-      <a target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
+      <a
+        className="block"
+        target="_blank"
+        href="https://linkedin.com/in/jorisgriffioen/"
+      >
         <img alt="linkedin" src="icon-linkedin.svg" />
         <div>LinkedIn</div>
       </a>
-      <a target="_blank" href="https://instagram.com/jorisjgriffioen">
+      <a
+        className="block"
+        target="_blank"
+        href="https://instagram.com/jorisjgriffioen"
+      >
         <img alt="instagram" src="icon-instagram.svg" />
         <div>Instagram</div>
       </a>
+
+      <h2>
+        <a href="/music">
+          <img alt="" src="icon-music.svg" />
+          <span>Music</span>
+        </a>
+      </h2>
       <a
-        className="large cs"
+        className="block large cs"
         target="_blank"
         href="https://www.coralsprings.nl/"
       >
         <img alt="Coral Springs" src="logo-coralsprings.svg" />
         <div>Coral Springs - pop punk</div>
       </a>
-      <a className="large la" target="_blank" href="https://www.leftalive.nl/">
+      <a
+        className="block large la"
+        target="_blank"
+        href="https://www.leftalive.nl/"
+      >
         <img alt="Left Alive" src="logo-leftalive.svg" />
         <div>Left Alive - pop punk</div>
       </a>
@@ -40,7 +67,7 @@ export default () => (
         width: 300px;
       }
 
-      a {
+      a.block {
         display: block;
         margin: 0 0 20px 0;
         padding: 20px 0;
@@ -50,19 +77,19 @@ export default () => (
         transition: box-shadow 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
-      a.large {
+      a.block.large {
         flex-basis: 100%;
       }
 
-      a:hover {
+      a.block:hover {
         box-shadow: inset 0 0 0 3px ${theme.color4};
       }
 
-      a img {
+      a.block img {
         width: 50px;
       }
 
-      a.large img {
+      a.block.large img {
         margin: 15px 0;
         width: calc(100% - 60px);
       }
@@ -81,6 +108,17 @@ export default () => (
       }
       a.la:hover {
         background-image: url('/vid-la.webp');
+      }
+
+      h2 {
+        margin: 30px 0;
+        width: 100%;
+      }
+
+      h2 a img {
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        height: 28px;
       }
 
       @media (min-width: 992px) {

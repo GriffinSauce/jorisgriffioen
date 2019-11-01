@@ -72,7 +72,7 @@ export default ({ children }) => (
       }
 
       body {
-        font-family: 'Montserrat', sans-serif;
+        font-family: ${theme.fontSecondary};
         font-size: 14px;
         text-align: center;
         color: #fff;
@@ -88,7 +88,7 @@ export default ({ children }) => (
       h3,
       h4,
       h5 {
-        font-family: 'Oswald', sans-serif;
+        font-family: ${theme.fontPrimary};
         font-weight: 300;
         color: ${theme.color2};
       }
@@ -97,10 +97,13 @@ export default ({ children }) => (
         font-size: 3rem;
       }
 
+      h2 {
+        font-size: 28px;
+      }
+
       img {
         margin: 0;
         padding: 0;
-        width: 100%;
       }
 
       a {
