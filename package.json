@@ -5,6 +5,7 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
+    "framer-motion": "^1.6.15",
     "next": "9.1.2",
     "polished": "^3.4.1",
     "react": "16.11.0",

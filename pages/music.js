@@ -1,135 +1,155 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
+import MusicLinks from '../components/MusicLinks';
 import YouTube from 'react-youtube';
 import theme from '../theme';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-const Home = () => (
-  <Layout>
-    <a href="/" className="logo">
-      <Logo />
-    </a>
+const Music = () => {
+  const constraintRef = useRef();
+  const x = useMotionValue(100);
+  const opacity1 = useTransform(x, [-100, 0, 100], [0.5, 0.8, 1]);
+  const opacity2 = useTransform(x, [-100, 0, 100], [1, 0.8, 0.5]);
+  // const background = useTransform(
+  //   x,
+  //   [-100, 0, 100],
+  //   ['#ff008c', '#7700ff', 'rgb(230, 255, 0)'],
+  // );
 
-    <section>
-      <h2>
-        <a className="cs" target="_blank" href="https://www.coralsprings.nl/">
-          <img
-            className="band-logo"
-            alt="Coral Springs"
-            src="logo-coralsprings.svg"
-          />
-        </a>
-      </h2>
+  const [clickable, setClickable] = useState(null);
 
-      <YouTube videoId="VJzLCTPIfGc" />
+  return (
+    <Layout>
+      <a href="/" className="logo">
+        <Logo />
+      </a>
 
-      <nav>
-        <a
-          target="_blank"
-          href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
+      <div className="container" ref={constraintRef}>
+        <motion.div
+          drag="x"
+          dragConstraints={{ left: -200, right: 200 }}
+          onDragStart={() => {
+            setClickable(null);
+          }}
+          onDragEnd={() => {
+            console.log(x.get());
+            if (x.get() > 0) {
+              setClickable('CS');
+              x.set(200);
+            } else {
+              setClickable('LA');
+              x.set(-200);
+            }
+          }}
+          style={{ x }}
         >
-          <img alt="spotify" src="icon-spotify.svg" />
-        </a>
-        <a
-          target="_blank"
-          href="https://music.apple.com/us/artist/coral-springs/348189917"
-        >
-          <img alt="apple music" src="icon-applemusic.svg" />
-        </a>
-        <a
-          target="_blank"
-          href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
-        >
-          <img alt="bandcamp" src="icon-bandcamp.svg" />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
-        >
-          <img alt="physical media" src="icon-vinyl.svg" />
-        </a>
-      </nav>
-    </section>
+          <div className="draggable-container">
+            <motion.div
+              className="band"
+              style={{
+                opacity: opacity1,
+                ...(clickable !== 'CS' ? { pointerEvents: 'none' } : {}),
+              }}
+            >
+              <h2>
+                <a
+                  className="cs"
+                  target="_blank"
+                  href="https://www.coralsprings.nl/"
+                >
+                  <img
+                    className="band-logo"
+                    alt="Coral Springs"
+                    src="logo-coralsprings.svg"
+                  />
+                </a>
+              </h2>
 
-    <section>
-      <h2>
-        <a className="la" target="_blank" href="https://www.leftalive.nl/">
-          <img
-            className="band-logo"
-            alt="Left Alive"
-            src="logo-leftalive.svg"
-          />
-        </a>
-      </h2>
+              <YouTube videoId="VJzLCTPIfGc" />
 
-      <YouTube videoId="ypjM2_CkeXs" />
+              <MusicLinks band="cs" />
+            </motion.div>
+            <motion.div
+              className="band"
+              style={{
+                opacity: opacity2,
+                ...(clickable !== 'LA' ? { pointerEvents: 'none' } : {}),
+              }}
+            >
+              <h2>
+                <a
+                  className="la"
+                  target="_blank"
+                  href="https://www.leftalive.nl/"
+                >
+                  <img
+                    className="band-logo"
+                    alt="Left Alive"
+                    src="logo-leftalive.svg"
+                  />
+                </a>
+              </h2>
 
-      <nav>
-        <a
-          target="_blank"
-          href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A?si=t-KS0MCPQWWqpD7IZS8-zQ"
-        >
-          <img alt="spotify" src="icon-spotify.svg" />
-        </a>
-        <a
-          target="_blank"
-          href="https://itunes.apple.com/us/artist/left-alive/1073464999"
-        >
-          <img alt="apple music" src="icon-applemusic.svg" />
-        </a>
-        <a target="_blank" href="https://soundcloud.com/leftalive/">
-          <img alt="soundcloud" src="icon-soundcloud.svg" />
-        </a>
-        <a target="_blank" href="https://www.youtube.com/leftalive">
-          <img alt="youtube" src="icon-youtube.svg" />
-        </a>
-      </nav>
-    </section>
+              <YouTube videoId="ypjM2_CkeXs" />
 
-    <style jsx>{`
-      .logo :global(svg) {
-        margin: 30px 0 15px 0;
-        width: 100px;
-      }
+              <MusicLinks band="la" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
 
-      section {
-        margin: 50px 0 80px 0;
-      }
+      <style jsx>{`
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 50px 0 0 0;
+        }
+        .draggable-container {
+          display: flex;
+          flex-direction: row;
+          width: 800px;
+        }
+        .draggable-container :global(.band) {
+          width: 400px;
+        }
+        .draggable-container .band-logo {
+          width: 80%;
+        }
+      `}</style>
 
-      h2 {
-        margin: 0 0 30px 0;
-      }
+      <style jsx>{`
+        .logo :global(svg) {
+          margin: 30px 0 15px 0;
+          width: 100px;
+        }
 
-      .band-logo {
-        width: 60%;
-      }
-
-      nav {
-        margin-top: 15px;
-      }
-
-      nav img {
-        margin: 15px;
-        width: 30px;
-      }
-
-      :global(iframe) {
-        width: 80vw;
-        height: calc(80vw / 1.7777777);
-      }
-
-      @media (min-width: 768px) {
         section {
-          margin: 100px 0 200px 0;
+          margin: 50px 0 80px 0;
         }
 
-        nav img {
-          margin: 15px 30px;
-          width: 50px;
+        h2 {
+          margin: 0 0 30px 0;
         }
-      }
-    `}</style>
-  </Layout>
-);
 
-export default Home;
+        .band-logo {
+          width: 60%;
+        }
+
+        :global(iframe) {
+          width: 80vw;
+          height: calc(80vw / 1.7777777);
+        }
+
+        @media (min-width: 768px) {
+          section {
+            margin: 100px 0 200px 0;
+          }
+        }
+      `}</style>
+    </Layout>
+  );
+};
+
+export default Music;
