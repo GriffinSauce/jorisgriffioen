@@ -2,12 +2,18 @@ import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import usePrevious from '../lib/usePrevious';
 
-export default () => {
+export default ({ children }) => {
   const [selectedBand, setSelectedBand] = useState('cs');
   const prevSelectedBand = usePrevious(selectedBand);
   const controls = useAnimation();
+  const [clickable, setClickable] = useState(true);
 
-  function onDragEnd(event, info) {
+  const onDragStart = () => {
+    setClickable(false);
+  };
+
+  const onDragEnd = (event, info) => {
+    setClickable(true);
     const shouldClose =
       info.velocity.x > 20 || (info.velocity.x >= 0 && info.point.x > 45);
     if (shouldClose) {
@@ -17,7 +23,7 @@ export default () => {
       controls.start('la');
       setSelectedBand('la');
     }
-  }
+  };
 
   useEffect(() => {
     if (prevSelectedBand === 'la' && selectedBand === 'cs') {
@@ -32,6 +38,7 @@ export default () => {
       <div className="container">
         <motion.div
           drag="x"
+          onDragStart={onDragStart}
           onDragEnd={onDragEnd}
           initial="cs"
           animate={controls}
@@ -48,8 +55,24 @@ export default () => {
           dragElastic={0.2}
         >
           <div className="draggable">
-            <section>Coral Springs</section>
-            <section>Left Alive</section>
+            <motion.section
+              style={{
+                ...(clickable && selectedBand === 'cs'
+                  ? {}
+                  : { pointerEvents: 'none' }),
+              }}
+            >
+              {children[0]}
+            </motion.section>
+            <motion.section
+              style={{
+                ...(clickable && selectedBand === 'la'
+                  ? {}
+                  : { pointerEvents: 'none' }),
+              }}
+            >
+              {children[1]}{' '}
+            </motion.section>
           </div>
         </motion.div>
       </div>
