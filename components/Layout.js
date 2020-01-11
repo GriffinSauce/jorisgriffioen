@@ -78,7 +78,7 @@ export default ({ children }) => (
         color: #fff;
         background: linear-gradient(
           135deg,
-          ${darken(0.1, theme.color5)},
+          ${darken(0.35, theme.color5)},
           ${darken(0.4, theme.color1)}
         );
       }
