@@ -127,6 +127,11 @@ const Home = () => (
           margin: 15px 30px;
           width: 50px;
         }
+
+        :global(iframe) {
+          width: 50vw;
+          height: calc(50vw / 1.7777777);
+        }
       }
     `}</style>
   </Layout>
