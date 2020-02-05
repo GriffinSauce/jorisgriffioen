@@ -15,7 +15,7 @@ export default () => (
         <img alt="linkedin" src="icon-linkedin.svg" />
         <div>LinkedIn</div>
       </a>
-      <a target="_blank" href="https://instagram.com/jorisjgriffioen">
+      <a target="_blank" href="https://instagram.com/jorisgriffioen">
         <img alt="instagram" src="icon-instagram.svg" />
         <div>Instagram</div>
       </a>
