@@ -5,10 +5,10 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
-    "next": "9.1.2",
+    "next": "^9.3.0",
     "polished": "^3.4.1",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-youtube": "^7.9.0"
   },
   "scripts": {
