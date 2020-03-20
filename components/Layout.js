@@ -10,7 +10,7 @@ export default ({ children }) => (
       <meta name="author" content="Joris Griffioen" />
 
       <meta property="og:site_name" content="Joris Griffioen" />
-      <meta property="og:url" content="http://www.joris.rocks/" />
+      <meta key="og:url" property="og:url" content="http://www.joris.rocks/" />
       <meta property="og:title" content="Joris Griffioen" />
 
       <meta
