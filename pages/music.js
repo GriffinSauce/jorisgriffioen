@@ -9,13 +9,7 @@ const Home = () => (
   <Layout>
     <Head>
       <title>My bands</title>
-      <meta
-        property="og:image"
-        content="http://www.joris.rocks/bands-social.jpg"
-      />
-      <meta property="og:image:type" content="image/jpg" />
-      <meta property="og:image:width" content="2048" />
-      <meta property="og:image:height" content="1365" />
+      <meta property="og:url" content="http://www.joris.rocks/music" />
     </Head>
 
     <Link href="/">

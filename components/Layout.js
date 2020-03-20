@@ -8,19 +8,19 @@ export default ({ children }) => (
       <meta charSet="UTF-8" />
       <title>Joris Griffioen</title>
       <meta name="author" content="Joris Griffioen" />
-      <meta name="description" content="Eat, create, sleep, repeat." />
 
       <meta property="og:site_name" content="Joris Griffioen" />
-      <meta property="og:url" content="http://www.joris.rocks/dealwithit.gif" />
+      <meta property="og:url" content="http://www.joris.rocks/" />
       <meta property="og:title" content="Joris Griffioen" />
-      <meta property="og:description" content="Eat, create, sleep, repeat." />
-      <meta property="og:type" content="video.other" />
+
       <meta
         property="og:image"
-        content="http://www.joris.rocks/dealwithit.gif"
+        content="http://www.joris.rocks/bands-social.jpg"
       />
-      <meta property="og:image:width" content="462" />
-      <meta property="og:image:height" content="250" />
+      <meta property="og:image:type" content="image/jpg" />
+      <meta property="og:image:width" content="2048" />
+      <meta property="og:image:height" content="1365" />
+      <meta name="twitter:card" content="summary_large_image" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
