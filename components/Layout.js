@@ -7,11 +7,21 @@ export default ({ children }) => (
     <Head>
       <meta charSet="UTF-8" />
       <title>Joris Griffioen</title>
+      <meta property="og:site_name" content="Joris Griffioen" />
+      <meta property="og:title" content="Joris Griffioen" />
+      <meta
+        key="description"
+        name="description"
+        content="Developer, guitarist."
+      />
+      <meta
+        key="og:description"
+        property="og:description"
+        content="Developer, guitarist."
+      />
       <meta name="author" content="Joris Griffioen" />
 
-      <meta property="og:site_name" content="Joris Griffioen" />
       <meta key="og:url" property="og:url" content="https://www.joris.rocks/" />
-      <meta property="og:title" content="Joris Griffioen" />
 
       <meta
         property="og:image"

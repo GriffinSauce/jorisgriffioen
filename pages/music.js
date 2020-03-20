@@ -14,6 +14,8 @@ const Home = () => (
         property="og:url"
         content="https://www.joris.rocks/music"
       />
+      <meta key="description" name="description" content="My bands" />
+      <meta key="og:description" property="og:description" content="My bands" />
     </Head>
 
     <Link href="/">
