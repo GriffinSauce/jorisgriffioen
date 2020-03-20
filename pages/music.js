@@ -13,7 +13,7 @@ const Home = () => (
         property="og:image"
         content="http://www.joris.rocks/bands-social.jpg"
       />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:type" content="image/jpg" />
       <meta property="og:image:width" content="2048" />
       <meta property="og:image:height" content="1365" />
     </Head>
