@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
@@ -22,10 +22,12 @@ const Home = () => (
 
     <section>
       <h2>
-        <a href="/music">
-          <img alt="" src="icon-music.svg" />
-          <span>Music</span>
-        </a>
+        <Link href="/music">
+          <a>
+            <img alt="" src="icon-music.svg" />
+            <span>Music</span>
+          </a>
+        </Link>
       </h2>
       <LinksBands />
     </section>

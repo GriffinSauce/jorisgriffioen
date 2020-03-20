@@ -1,4 +1,5 @@
-import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import YouTube from 'react-youtube';
@@ -6,9 +7,24 @@ import theme from '../theme';
 
 const Home = () => (
   <Layout>
-    <a href="/" className="logo">
-      <Logo />
-    </a>
+    <Head>
+      <title>My bands</title>
+      <meta
+        property="og:image"
+        content="http://www.joris.rocks/bands-social.jpg"
+      />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="2048" />
+      <meta property="og:image:height" content="1365" />
+    </Head>
+
+    <Link href="/">
+      <a className="logo">
+        <Logo />
+      </a>
+    </Link>
+
+    <h1>My bands</h1>
 
     <section>
       <h2>
@@ -87,8 +103,11 @@ const Home = () => (
     </section>
 
     <style jsx>{`
+      .logo {
+        margin: 30px 0 0 0;
+        display: inline-block;
+      }
       .logo :global(svg) {
-        margin: 30px 0 15px 0;
         width: 100px;
       }
 
