@@ -10,12 +10,12 @@ export default ({ children }) => (
       <meta name="author" content="Joris Griffioen" />
 
       <meta property="og:site_name" content="Joris Griffioen" />
-      <meta key="og:url" property="og:url" content="http://www.joris.rocks/" />
+      <meta key="og:url" property="og:url" content="https://www.joris.rocks/" />
       <meta property="og:title" content="Joris Griffioen" />
 
       <meta
         property="og:image"
-        content="http://www.joris.rocks/bands-social.jpg"
+        content="https://www.joris.rocks/bands-social.jpg"
       />
       <meta property="og:image:type" content="image/jpg" />
       <meta property="og:image:width" content="2048" />

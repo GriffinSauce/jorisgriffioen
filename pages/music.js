@@ -12,7 +12,7 @@ const Home = () => (
       <meta
         key="og:url"
         property="og:url"
-        content="http://www.joris.rocks/music"
+        content="https://www.joris.rocks/music"
       />
     </Head>
 
