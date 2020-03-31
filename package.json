@@ -5,7 +5,7 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
-    "next": "^9.3.1",
+    "next": "^9.3.2",
     "polished": "^3.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
