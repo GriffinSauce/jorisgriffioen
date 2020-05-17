@@ -39,7 +39,7 @@ export default ({ children }) => (
         rel="stylesheet"
       />
 
-      <meta name="theme-color" content="#552082" />
+      <meta name="theme-color" content="#21062c" />
       <meta name="msapplication-TileColor" content="#9f00a7" />
       <meta name="msapplication-config" content="browserconfig.xml" />
       <link rel="manifest" href="site.webmanifest" />
