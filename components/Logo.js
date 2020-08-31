@@ -3,7 +3,7 @@ import theme from '../theme';
 // colorLogo: #93c01f; // Original
 const colorLogo = theme.color1;
 
-export default ({ width = '100px' }) => (
+const Logo = ({ width = '100px' }) => (
   <>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -206,3 +206,5 @@ export default ({ width = '100px' }) => (
     `}</style>
   </>
 );
+
+export default Logo;

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { darken, saturate } from 'polished';
 import theme from '../theme';
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <>
     <Head>
       <meta charSet="UTF-8" />
@@ -131,3 +131,5 @@ export default ({ children }) => (
     `}</style>
   </>
 );
+
+export default Layout;
