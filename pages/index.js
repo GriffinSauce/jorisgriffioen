@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
 import LinksBands from '../components/LinksBands';
-import theme from '../theme';
 
 const Home = () => (
   <Layout>

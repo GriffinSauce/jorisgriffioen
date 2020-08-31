@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import YouTube from 'react-youtube';
-import theme from '../theme';
 
 const Music = () => (
   <Layout>
