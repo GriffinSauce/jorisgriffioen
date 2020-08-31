@@ -3,9 +3,8 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import YouTube from 'react-youtube';
-import theme from '../theme';
 
-const Home = () => (
+const Music = () => (
   <Layout>
     <Head>
       <title>My bands</title>
@@ -156,4 +155,4 @@ const Home = () => (
   </Layout>
 );
 
-export default Home;
+export default Music;

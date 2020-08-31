@@ -5,15 +5,24 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
-    "next": "^9.4.1",
+    "next": "^9.5.2",
     "polished": "^3.6.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "preact": "^10.4.8",
+    "preact-render-to-string": "^5.1.10",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
     "react-youtube": "^7.11.2"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "next-optimized-images": "^2.6.2",
+    "next-plugin-preact": "^3.0.1",
+    "webp-loader": "^0.6.0"
   }
 }

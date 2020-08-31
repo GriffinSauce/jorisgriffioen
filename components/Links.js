@@ -1,6 +1,6 @@
 import theme from '../theme';
 
-export default () => (
+const Links = () => (
   <>
     <nav>
       <a target="_blank" href="https://github.com/GriffinSauce">
@@ -58,3 +58,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default Links;
