@@ -1,7 +1,7 @@
 import theme from '../theme';
 import { darken } from 'polished';
 
-export default () => (
+const LinksBands = () => (
   <>
     <nav>
       <a className="cs" target="_blank" href="https://www.coralsprings.nl/">
@@ -103,3 +103,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default LinksBands;

@@ -3,12 +3,23 @@ import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
 import LinksBands from '../components/LinksBands';
-import theme from '../theme';
 
 const Home = () => (
   <Layout>
     <header>
-      <img className="avatar" alt="Joris Griffioen" src="/avatar.jpg" />
+      <picture>
+        <source
+          srcSet={require('../public/avatar.jpg?webp')}
+          type="image/webp"
+        />
+        <source srcSet={require('../public/avatar.jpg')} type="image/jpeg" />
+        <img
+          src={require('../public/avatar.jpg')}
+          alt="Joris Griffioen"
+          className="avatar"
+        />
+      </picture>
+
       <h1>Joris Griffioen</h1>
       <p>Developer, guitarist.</p>
     </header>
