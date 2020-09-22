@@ -5,8 +5,8 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
-    "next": "^9.5.2",
-    "polished": "^3.6.3",
+    "next": "^9.5.3",
+    "polished": "^3.6.7",
     "preact": "^10.4.8",
     "preact-render-to-string": "^5.1.10",
     "react": "npm:@preact/compat",
