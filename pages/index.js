@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
@@ -7,18 +8,15 @@ import LinksBands from '../components/LinksBands';
 const Home = () => (
   <Layout>
     <header>
-      <picture>
-        <source
-          srcSet={require('../public/avatar.jpg?webp')}
-          type="image/webp"
-        />
-        <source srcSet={require('../public/avatar.jpg')} type="image/jpeg" />
-        <img
-          src={require('../public/avatar.jpg')}
+      <div className="avatar">
+        <Image
+          src="/avatar.jpg"
           alt="Joris Griffioen"
-          className="avatar"
+          width="100px"
+          height="100px"
+          quality={90}
         />
-      </picture>
+      </div>
 
       <h1>Joris Griffioen</h1>
       <p>Developer, guitarist.</p>
@@ -48,10 +46,6 @@ const Home = () => (
         margin: 0 0 50px 0;
       }
 
-      header img {
-        margin: 50px 0 15px 0;
-      }
-
       header h1,
       header p {
         margin: 0;
@@ -62,7 +56,13 @@ const Home = () => (
       }
 
       .avatar {
-        width: 100px;
+        margin: 50px 0 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .avatar :global(img) {
         border-radius: 100px;
       }
 
