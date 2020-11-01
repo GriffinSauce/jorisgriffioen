@@ -3,12 +3,14 @@ import theme from '../theme';
 // colorLogo: #93c01f; // Original
 const colorLogo = theme.color1;
 
+const aspectRatio = 97 / 82;
+
 const Logo = ({ width = '100px' }) => (
   <>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 97 82"
-      style={{ width }}
+      style={{ width, height: `calc(${width} / ${aspectRatio})` }}
       aria-label="Griffin illustration"
     >
       <title>Griffin illustration</title>
