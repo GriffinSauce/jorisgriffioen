@@ -27,7 +27,12 @@ const Music = () => (
 
     <section>
       <h2>
-        <a className="cs" target="_blank" href="https://www.coralsprings.nl/">
+        <a
+          className="cs"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.coralsprings.nl/"
+        >
           <img
             className="band-logo"
             alt="Coral Springs"
@@ -41,24 +46,28 @@ const Music = () => (
       <nav>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
         >
           <img alt="spotify" src="icon-spotify.svg" />
         </a>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://music.apple.com/us/artist/coral-springs/348189917"
         >
           <img alt="apple music" src="icon-applemusic.svg" />
         </a>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
         >
           <img alt="bandcamp" src="icon-bandcamp.svg" />
         </a>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
         >
           <img alt="physical media" src="icon-vinyl.svg" />
@@ -68,7 +77,12 @@ const Music = () => (
 
     <section>
       <h2>
-        <a className="la" target="_blank" href="https://www.leftalive.nl/">
+        <a
+          className="la"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.leftalive.nl/"
+        >
           <img
             className="band-logo"
             alt="Left Alive"
@@ -82,20 +96,30 @@ const Music = () => (
       <nav>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A?si=t-KS0MCPQWWqpD7IZS8-zQ"
         >
           <img alt="spotify" src="icon-spotify.svg" />
         </a>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://itunes.apple.com/us/artist/left-alive/1073464999"
         >
           <img alt="apple music" src="icon-applemusic.svg" />
         </a>
-        <a target="_blank" href="https://soundcloud.com/leftalive/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://soundcloud.com/leftalive/"
+        >
           <img alt="soundcloud" src="icon-soundcloud.svg" />
         </a>
-        <a target="_blank" href="https://www.youtube.com/leftalive">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.youtube.com/leftalive"
+        >
           <img alt="youtube" src="icon-youtube.svg" />
         </a>
       </nav>

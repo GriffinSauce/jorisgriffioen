@@ -3,19 +3,35 @@ import theme from '../theme';
 const Links = () => (
   <>
     <nav>
-      <a target="_blank" href="https://github.com/GriffinSauce">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/GriffinSauce"
+      >
         <img alt="github" src="icon-github.svg" />
         <div>Github</div>
       </a>
-      <a target="_blank" href="https://twitter.com/jorisgriffioen">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/jorisgriffioen"
+      >
         <img alt="twitter" src="icon-twitter.svg" />
         <div>Twitter</div>
       </a>
-      <a target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://linkedin.com/in/jorisgriffioen/"
+      >
         <img alt="linkedin" src="icon-linkedin.svg" />
         <div>LinkedIn</div>
       </a>
-      <a target="_blank" href="https://instagram.com/jorisgriffioen">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://instagram.com/jorisgriffioen"
+      >
         <img alt="instagram" src="icon-instagram.svg" />
         <div>Instagram</div>
       </a>

@@ -4,11 +4,21 @@ import { darken } from 'polished';
 const LinksBands = () => (
   <>
     <nav>
-      <a className="cs" target="_blank" href="https://www.coralsprings.nl/">
+      <a
+        className="cs"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.coralsprings.nl/"
+      >
         <img alt="Coral Springs" src="logo-coralsprings.svg" />
         <div className="description">Coral Springs - pop punk</div>
       </a>
-      <a className="la" target="_blank" href="https://www.leftalive.nl/">
+      <a
+        className="la"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.leftalive.nl/"
+      >
         <img alt="Left Alive" src="logo-leftalive.svg" />
         <div className="description">Left Alive - pop punk</div>
       </a>
