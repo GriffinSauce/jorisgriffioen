@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
-import YouTube from 'react-youtube';
+import YouTube from '../components/Youtube';
 
 const Music = () => (
   <Layout>
@@ -41,7 +41,9 @@ const Music = () => (
         </a>
       </h2>
 
-      <YouTube videoId="VJzLCTPIfGc" />
+      <div className="video">
+        <YouTube videoId="VJzLCTPIfGc" />
+      </div>
 
       <nav>
         <a
@@ -91,7 +93,9 @@ const Music = () => (
         </a>
       </h2>
 
-      <YouTube videoId="ypjM2_CkeXs" />
+      <div className="video">
+        <YouTube videoId="ypjM2_CkeXs" />
+      </div>
 
       <nav>
         <a
@@ -155,7 +159,8 @@ const Music = () => (
         width: 30px;
       }
 
-      :global(iframe) {
+      .video {
+        margin: 0 auto;
         width: 80vw;
         height: calc(80vw / 1.7777777);
       }
@@ -170,7 +175,7 @@ const Music = () => (
           width: 50px;
         }
 
-        :global(iframe) {
+        .video {
           width: 50vw;
           height: calc(50vw / 1.7777777);
         }

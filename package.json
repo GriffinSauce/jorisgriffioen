@@ -5,13 +5,13 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
+    "@react-aria/interactions": "^3.7.0",
     "next": "^10.0.5",
     "polished": "^4.0.5",
     "preact": "^10.5.9",
     "preact-render-to-string": "^5.1.12",
     "react": "npm:@preact/compat",
-    "react-dom": "npm:@preact/compat",
-    "react-youtube": "^7.13.0"
+    "react-dom": "npm:@preact/compat"
   },
   "scripts": {
     "dev": "next dev",
