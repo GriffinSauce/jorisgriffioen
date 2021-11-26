@@ -134,9 +134,6 @@ const Music = () => (
         margin: 30px 0 0 0;
         display: inline-block;
       }
-      .logo :global(svg) {
-        width: 100px;
-      }
 
       section {
         margin: 50px 0 80px 0;
