@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@react-aria/interactions": "^3.7.0",
-    "next": "^10.0.5",
+    "next": "^11.1.1",
     "polished": "^4.0.5",
     "preact": "^10.5.9",
     "preact-render-to-string": "^5.1.12",
