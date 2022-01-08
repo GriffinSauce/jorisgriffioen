@@ -1,0 +1,70 @@
+@tailwind base;
+
+html,
+body {
+  @apply  w-full min-h-full bg-black;
+}
+
+body {
+  @apply font-primary  text-white;
+
+  /* background: linear-gradient(
+    135deg,
+    ${darken(0.35, theme.color5)},
+    ${darken(0.4, theme.color1)}
+  ); */
+}
+
+html {
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+  @apply text-gray-800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-primary font-normal leading-tight font-light;
+}
+
+h1,
+.h1 {
+  @apply text-3xl;
+}
+h2,
+.h2 {
+  @apply text-2xl;
+}
+h3,
+.h3 {
+  @apply text-xl;
+}
+h4,
+.h4 {
+  @apply text-base;
+}
+h5,
+.h5 {
+  @apply text-sm;
+}
+h6,
+.h6 {
+  @apply text-xs;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+
+@tailwind components;
+@tailwind utilities;

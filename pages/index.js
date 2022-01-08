@@ -1,82 +1,77 @@
+import { BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
-import LinksBands from '../components/LinksBands';
+import Music from '../components/Music';
+import Projects from '../components/Projects';
 
 const Home = () => (
   <Layout>
     <header>
-      <div className="avatar">
-        <Image
-          src="/avatar.jpg"
-          alt="Joris Griffioen"
-          width="100px"
-          height="100px"
-          quality={90}
-        />
+      <div className="gap-3 py-6 bg-black flex-center">
+        <Logo width={80} />
+        <div>
+          <h1>Joris Griffioen</h1>
+          <p>Developer, guitarist.</p>
+        </div>
       </div>
 
-      <h1>Joris Griffioen</h1>
-      <p>Developer, guitarist.</p>
+      <Image
+        src="/hero.jpg"
+        alt="On stage with Left Alive"
+        layout="responsive"
+        width={600}
+        height={400}
+        quality={90}
+        priority
+      />
     </header>
 
-    <section>
-      <h2>
-        <Logo />
-      </h2>
-      <Links />
+    <section className="my-3 bg-black">
+      <div className="sm:w-[80vw] mx-auto">
+        <Links />
+      </div>
     </section>
 
-    <section>
-      <h2>
-        <Link href="/music">
-          <a>
-            <img alt="" src="icon-music.svg" />
-            <span>Music</span>
-          </a>
-        </Link>
+    <section className="grid gap-16 mt-12 text-center sm:gap-20 ">
+      <h2 id="music" className="text-left border-b-2">
+        <div className="w-[80vw] mx-auto">
+          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
+            Music
+          </div>
+        </div>
       </h2>
-      <LinksBands />
+
+      <Music />
     </section>
 
-    <style jsx>{`
-      header {
-        margin: 0 0 50px 0;
-      }
+    <section className="grid gap-8 mt-12 text-center sm:gap-8 ">
+      <h2 id="projects" className="text-left border-b-2">
+        <div className="w-[80vw] mx-auto">
+          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
+            Projects
+          </div>
+        </div>
+      </h2>
 
-      header h1,
-      header p {
-        margin: 0;
-      }
+      <div className="w-[80vw] mx-auto">
+        <Projects />
+      </div>
+    </section>
 
-      header p {
-        font-size: 1.4rem;
-      }
-
-      .avatar {
-        margin: 50px 0 15px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .avatar :global(img) {
-        border-radius: 100px;
-      }
-
-      h2 {
-        margin: 30px 0;
-        width: 100%;
-      }
-
-      h2 a img {
-        vertical-align: middle;
-        margin: 0 5px 0 0;
-        height: 28px;
-      }
-    `}</style>
+    <footer className="py-6 text-sm text-center text-gray-600">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/GriffinSauce/jorisgriffioen"
+      >
+        <BsGithub className="inline-block" />
+        <span> source</span>
+      </a>
+      <span> - artwork by Evelien Griffioen</span>
+    </footer>
   </Layout>
 );
 

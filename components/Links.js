@@ -1,78 +1,57 @@
-import theme from '../theme';
+import { forwardRef } from 'react';
+import Link from 'next/link';
+import {
+  BsMusicNoteBeamed,
+  BsInstagram,
+  BsTwitter,
+  BsGithub,
+} from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
+import { GoTools } from 'react-icons/go';
+
+const Anchor = forwardRef(({ children, ...props }, ref) => {
+  return (
+    <a
+      {...props}
+      ref={ref}
+      rel="noopener noreferrer"
+      className="flex-col gap-2 py-6 text-lg flex-center"
+    >
+      {children}
+    </a>
+  );
+});
+
+const Icon = ({ src, alt }) => <img className="w-8" alt={alt} src={src} />;
 
 const Links = () => (
   <>
-    <nav>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/GriffinSauce"
-      >
-        <img alt="github" src="icon-github.svg" />
+    <nav className="grid grid-cols-3 sm:grid-cols-6">
+      <Anchor target="_blank" href="https://github.com/GriffinSauce">
+        <BsGithub className="text-3xl" />
         <div>Github</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://twitter.com/jorisgriffioen"
-      >
-        <img alt="twitter" src="icon-twitter.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://twitter.com/jorisgriffioen">
+        <BsTwitter className="text-3xl" />
         <div>Twitter</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://linkedin.com/in/jorisgriffioen/"
-      >
-        <img alt="linkedin" src="icon-linkedin.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
+        <FaLinkedin className="text-3xl" />
         <div>LinkedIn</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://instagram.com/jorisgriffioen"
-      >
-        <img alt="instagram" src="icon-instagram.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://instagram.com/jorisgriffioen">
+        <BsInstagram className="text-3xl" />
         <div>Instagram</div>
-      </a>
+      </Anchor>
+      <Anchor href="#music">
+        <BsMusicNoteBeamed className="text-3xl" />
+        <span>Music</span>
+      </Anchor>
+      <Anchor href="#projects">
+        <GoTools className="text-3xl" />
+        <span>Projects</span>
+      </Anchor>
     </nav>
-    <style jsx>{`
-      nav {
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 300px;
-      }
-
-      a {
-        display: block;
-        margin: 0 0 20px 0;
-        padding: 20px 0;
-        flex-basis: calc(50% - 10px);
-        background-color: rgba(255, 255, 255, 0.05);
-        border: 1px solid ${theme.color4};
-        transition: box-shadow 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      a:hover {
-        box-shadow: inset 0 0 0 4px ${theme.color4};
-      }
-
-      a img {
-        width: 50px;
-        height: 50px;
-      }
-
-      @media (min-width: 992px) {
-        nav {
-          width: 600px;
-        }
-
-        a {
-          flex-basis: calc(25% - 15px);
-        }
-      }
-    `}</style>
   </>
 );
 
