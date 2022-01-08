@@ -8,7 +8,7 @@ const MusicLink = ({ label, icon, href, children }) => (
     rel="noopener noreferrer"
     href={href}
   >
-    <img className="w-8 md:w-16 mx-4" alt={label} src={icon} />
+    <img className="w-8 mx-4 md:w-14" alt={label} src={icon} />
   </a>
 );
 
@@ -30,7 +30,7 @@ const Music = () => (
         </a>
       </h3>
 
-      <div className="my-0 mx-auto aspect-video w-[80vw]">
+      <div className="mx-auto aspect-video w-[80vw]">
         <YouTube videoId="VJzLCTPIfGc" />
       </div>
 
@@ -74,7 +74,7 @@ const Music = () => (
         </a>
       </h3>
 
-      <div className="my-0 mx-auto aspect-video w-[80vw]">
+      <div className="mx-auto aspect-video w-[80vw]">
         <YouTube videoId="ypjM2_CkeXs" />
       </div>
 

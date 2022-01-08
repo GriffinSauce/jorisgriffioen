@@ -30,11 +30,11 @@ const Tag = ({ id }) => {
 };
 
 const Project = ({ url, name, description, tags = [] }) => (
-  <a className="text-left grid gap-1" href={url}>
+  <a className="grid gap-1 text-left" href={url}>
     <div className="text-xl">{name}</div>
     <div className="space-x-1">
       {tags.map((tag) => (
-        <Tag id={tag} />
+        <Tag key={tag} id={tag} />
       ))}
     </div>
     <div className="font-light">{description}</div>

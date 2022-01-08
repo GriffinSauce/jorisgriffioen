@@ -10,7 +10,7 @@ import Projects from '../components/Projects';
 const Home = () => (
   <Layout>
     <header>
-      <div className="flex-center gap-3 bg-black py-6">
+      <div className="gap-3 py-6 bg-black flex-center">
         <Logo width={80} />
         <div>
           <h1>Joris Griffioen</h1>
@@ -29,14 +29,16 @@ const Home = () => (
       />
     </header>
 
-    <section className="bg-black my-3">
-      <Links />
+    <section className="my-3 bg-black">
+      <div className="sm:w-[80vw] mx-auto">
+        <Links />
+      </div>
     </section>
 
-    <section className="mt-12 grid gap-16 sm:gap-20 text-center ">
-      <h2 id="music" className="border-b-2 text-left">
+    <section className="grid gap-16 mt-12 text-center sm:gap-20 ">
+      <h2 id="music" className="text-left border-b-2">
         <div className="w-[80vw] mx-auto">
-          <div className="bg-white text-black inline-block pb-1 px-3 -skew-x-3">
+          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
             Music
           </div>
         </div>
@@ -45,10 +47,10 @@ const Home = () => (
       <Music />
     </section>
 
-    <section className="mt-12 grid gap-8 sm:gap-8 text-center ">
-      <h2 id="projects" className="border-b-2 text-left">
+    <section className="grid gap-8 mt-12 text-center sm:gap-8 ">
+      <h2 id="projects" className="text-left border-b-2">
         <div className="w-[80vw] mx-auto">
-          <div className="bg-white text-black inline-block pb-1 px-3 -skew-x-3">
+          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
             Projects
           </div>
         </div>
@@ -59,7 +61,7 @@ const Home = () => (
       </div>
     </section>
 
-    <footer className="text-sm text-gray-600 py-6 text-center">
+    <footer className="py-6 text-sm text-center text-gray-600">
       <a
         target="_blank"
         rel="noopener noreferrer"

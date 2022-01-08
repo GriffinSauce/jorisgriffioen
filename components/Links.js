@@ -15,7 +15,7 @@ const Anchor = forwardRef(({ children, ...props }, ref) => {
       {...props}
       ref={ref}
       rel="noopener noreferrer"
-      className="flex-center flex-col gap-2 py-6 text-lg"
+      className="flex-col gap-2 py-6 text-lg flex-center"
     >
       {children}
     </a>
@@ -26,7 +26,7 @@ const Icon = ({ src, alt }) => <img className="w-8" alt={alt} src={src} />;
 
 const Links = () => (
   <>
-    <nav className="grid grid-cols-3 sm:grid-cols-3">
+    <nav className="grid grid-cols-3 sm:grid-cols-6">
       <Anchor target="_blank" href="https://github.com/GriffinSauce">
         <BsGithub className="text-3xl" />
         <div>Github</div>
