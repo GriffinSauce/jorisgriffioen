@@ -1,3 +1,4 @@
+import { BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/Layout';
@@ -44,7 +45,7 @@ const Home = () => (
       <Music />
     </section>
 
-    <section className="mt-12 grid gap-16 sm:gap-20 text-center ">
+    <section className="mt-12 grid gap-8 sm:gap-8 text-center ">
       <h2 id="projects" className="border-b-2 text-left">
         <div className="w-[80vw] mx-auto">
           <div className="bg-white text-black inline-block pb-1 px-3 -skew-x-3">
@@ -53,7 +54,9 @@ const Home = () => (
         </div>
       </h2>
 
-      <Projects />
+      <div className="w-[80vw] mx-auto">
+        <Projects />
+      </div>
     </section>
 
     <footer className="text-sm text-gray-600 py-6 text-center">
@@ -62,12 +65,7 @@ const Home = () => (
         rel="noopener noreferrer"
         href="https://github.com/GriffinSauce/jorisgriffioen"
       >
-        <img
-          className="inline-block w-3 align-middle opacity-50"
-          alt="github"
-          src="icon-github.svg"
-        />{' '}
-        source
+        <BsGithub className="inline-block" /> source
       </a>
       <span> - artwork by Evelien Griffioen</span>
     </footer>

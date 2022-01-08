@@ -26,7 +26,7 @@ const Icon = ({ src, alt }) => <img className="w-8" alt={alt} src={src} />;
 
 const Links = () => (
   <>
-    <nav className="grid grid-cols-2 sm:grid-cols-3">
+    <nav className="grid grid-cols-3 sm:grid-cols-3">
       <Anchor target="_blank" href="https://github.com/GriffinSauce">
         <BsGithub className="text-3xl" />
         <div>Github</div>
