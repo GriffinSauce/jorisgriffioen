@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
-import LinksBands from '../components/LinksBands';
+import Music from '../components/Music';
+import Projects from '../components/Projects';
 
 const Home = () => (
   <Layout>
@@ -31,8 +32,28 @@ const Home = () => (
       <Links />
     </section>
 
-    <section className="mx-6">
-      <LinksBands />
+    <section className="mt-12 grid gap-16 sm:gap-20 text-center ">
+      <h2 id="music" className="border-b-2 text-left">
+        <div className="w-[80vw] mx-auto">
+          <div className="bg-white text-black inline-block pb-1 px-3 -skew-x-3">
+            Music
+          </div>
+        </div>
+      </h2>
+
+      <Music />
+    </section>
+
+    <section className="mt-12 grid gap-16 sm:gap-20 text-center ">
+      <h2 id="projects" className="border-b-2 text-left">
+        <div className="w-[80vw] mx-auto">
+          <div className="bg-white text-black inline-block pb-1 px-3 -skew-x-3">
+            Projects
+          </div>
+        </div>
+      </h2>
+
+      <Projects />
     </section>
 
     <footer className="text-sm text-gray-600 py-6 text-center">

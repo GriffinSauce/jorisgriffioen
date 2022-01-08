@@ -1,5 +1,13 @@
 import { forwardRef } from 'react';
 import Link from 'next/link';
+import {
+  BsMusicNoteBeamed,
+  BsInstagram,
+  BsTwitter,
+  BsGithub,
+} from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
+import { GoTools } from 'react-icons/go';
 
 const Anchor = forwardRef(({ children, ...props }, ref) => {
   return (
@@ -20,27 +28,29 @@ const Links = () => (
   <>
     <nav className="grid grid-cols-2 sm:grid-cols-3">
       <Anchor target="_blank" href="https://github.com/GriffinSauce">
-        <Icon alt="github" src="icon-github.svg" />
+        <BsGithub className="text-3xl" />
         <div>Github</div>
       </Anchor>
       <Anchor target="_blank" href="https://twitter.com/jorisgriffioen">
-        <Icon alt="twitter" src="icon-twitter.svg" />
+        <BsTwitter className="text-3xl" />
         <div>Twitter</div>
       </Anchor>
       <Anchor target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
-        <Icon alt="linkedin" src="icon-linkedin.svg" />
+        <FaLinkedin className="text-3xl" />
         <div>LinkedIn</div>
       </Anchor>
       <Anchor target="_blank" href="https://instagram.com/jorisgriffioen">
-        <Icon alt="instagram" src="icon-instagram.svg" />
+        <BsInstagram className="text-3xl" />
         <div>Instagram</div>
       </Anchor>
-      <Link href="/music">
-        <Anchor>
-          <Icon alt="music" src="icon-music.svg" />
-          <span>Music</span>
-        </Anchor>
-      </Link>
+      <Anchor href="#music">
+        <BsMusicNoteBeamed className="text-3xl" />
+        <span>Music</span>
+      </Anchor>
+      <Anchor href="#projects">
+        <GoTools className="text-3xl" />
+        <span>Projects</span>
+      </Anchor>
     </nav>
   </>
 );
