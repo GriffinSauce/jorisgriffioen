@@ -8,75 +8,48 @@ import LinksBands from '../components/LinksBands';
 const Home = () => (
   <Layout>
     <header>
-      <div className="avatar">
-        <Image
-          src="/avatar.jpg"
-          alt="Joris Griffioen"
-          width="100px"
-          height="100px"
-          quality={90}
-        />
+      <div className="flex-center gap-3 bg-black py-6">
+        <Logo width={80} />
+        <div>
+          <h1>Joris Griffioen</h1>
+          <p>Developer, guitarist.</p>
+        </div>
       </div>
 
-      <h1>Joris Griffioen</h1>
-      <p>Developer, guitarist.</p>
+      <Image
+        src="/hero.jpg"
+        alt="On stage with Left Alive"
+        layout="responsive"
+        width={600}
+        height={400}
+        quality={90}
+        priority
+      />
     </header>
 
-    <section>
-      <h2>
-        <Logo />
-      </h2>
+    <section className="bg-black my-3">
       <Links />
     </section>
 
-    <section>
-      <h2>
-        <Link href="/music">
-          <a>
-            <img alt="" src="icon-music.svg" />
-            <span>Music</span>
-          </a>
-        </Link>
-      </h2>
+    <section className="mx-6">
       <LinksBands />
     </section>
 
-    <style jsx>{`
-      header {
-        margin: 0 0 50px 0;
-      }
-
-      header h1,
-      header p {
-        margin: 0;
-      }
-
-      header p {
-        font-size: 1.4rem;
-      }
-
-      .avatar {
-        margin: 50px 0 15px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .avatar :global(img) {
-        border-radius: 100px;
-      }
-
-      h2 {
-        margin: 30px 0;
-        width: 100%;
-      }
-
-      h2 a img {
-        vertical-align: middle;
-        margin: 0 5px 0 0;
-        height: 28px;
-      }
-    `}</style>
+    <footer className="text-sm text-gray-600 py-6 text-center">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/GriffinSauce/jorisgriffioen"
+      >
+        <img
+          className="inline-block w-3 align-middle opacity-50"
+          alt="github"
+          src="icon-github.svg"
+        />{' '}
+        source
+      </a>
+      <span> - artwork by Evelien Griffioen</span>
+    </footer>
   </Layout>
 );
 

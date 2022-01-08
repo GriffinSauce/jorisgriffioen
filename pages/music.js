@@ -4,6 +4,17 @@ import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import YouTube from '../components/Youtube';
 
+const MusicLink = ({ label, icon, href, children }) => (
+  <a
+    className="inline-block"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.coralsprings.nl/"
+  >
+    <img className="w-8 md:w-16 mx-4" alt={label} src={icon} />
+  </a>
+);
+
 const Music = () => (
   <Layout>
     <Head>
@@ -18,166 +29,104 @@ const Music = () => (
     </Head>
 
     <Link href="/">
-      <a className="logo">
-        <Logo />
+      <a className="flex-center gap-3 bg-black py-6">
+        <Logo width={80} />
+        <div>
+          <h1>Bands</h1>
+          <p>Joris Griffioen</p>
+        </div>
       </a>
     </Link>
 
-    <h1>My bands</h1>
+    <main className="mt-12 grid gap-16 sm:gap-20 text-center ">
+      <section className="grid gap-6">
+        <h2>
+          <a
+            className="block"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.coralsprings.nl/"
+          >
+            <img
+              className="inline-block w-2/3"
+              alt="Coral Springs"
+              src="logo-coralsprings.svg"
+            />
+          </a>
+        </h2>
 
-    <section>
-      <h2>
-        <a
-          className="cs"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.coralsprings.nl/"
-        >
-          <img
-            className="band-logo"
-            alt="Coral Springs"
-            src="logo-coralsprings.svg"
-          />
-        </a>
-      </h2>
+        <div className="my-0 mx-auto aspect-video w-[80vw]">
+          <YouTube videoId="VJzLCTPIfGc" />
+        </div>
 
-      <div className="video">
-        <YouTube videoId="VJzLCTPIfGc" />
-      </div>
+        <nav>
+          <MusicLink
+            href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
+            description="spotify"
+            icon="icon-spotify.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://music.apple.com/us/artist/coral-springs/348189917"
+            description="apple music"
+            icon="icon-applemusic.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
+            description="bandcamp"
+            icon="icon-bandcamp.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
+            description="physical media"
+            icon="icon-vinyl.svg"
+          ></MusicLink>
+        </nav>
+      </section>
 
-      <nav>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
-        >
-          <img alt="spotify" src="icon-spotify.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://music.apple.com/us/artist/coral-springs/348189917"
-        >
-          <img alt="apple music" src="icon-applemusic.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
-        >
-          <img alt="bandcamp" src="icon-bandcamp.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
-        >
-          <img alt="physical media" src="icon-vinyl.svg" />
-        </a>
-      </nav>
-    </section>
+      <section className="grid gap-2">
+        <h2>
+          <a
+            className="block"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.leftalive.nl/"
+          >
+            <img
+              className="inline-block w-2/3"
+              alt="Left Alive"
+              src="logo-leftalive.svg"
+            />
+          </a>
+        </h2>
 
-    <section>
-      <h2>
-        <a
-          className="la"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.leftalive.nl/"
-        >
-          <img
-            className="band-logo"
-            alt="Left Alive"
-            src="logo-leftalive.svg"
-          />
-        </a>
-      </h2>
+        <div className="my-0 mx-auto aspect-video w-[80vw]">
+          <YouTube videoId="ypjM2_CkeXs" />
+        </div>
 
-      <div className="video">
-        <YouTube videoId="ypjM2_CkeXs" />
-      </div>
-
-      <nav>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A?si=t-KS0MCPQWWqpD7IZS8-zQ"
-        >
-          <img alt="spotify" src="icon-spotify.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://itunes.apple.com/us/artist/left-alive/1073464999"
-        >
-          <img alt="apple music" src="icon-applemusic.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://soundcloud.com/leftalive/"
-        >
-          <img alt="soundcloud" src="icon-soundcloud.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.youtube.com/leftalive"
-        >
-          <img alt="youtube" src="icon-youtube.svg" />
-        </a>
-      </nav>
-    </section>
-
-    <style jsx>{`
-      .logo {
-        margin: 30px 0 0 0;
-        display: inline-block;
-      }
-
-      section {
-        margin: 50px 0 80px 0;
-      }
-
-      h2 {
-        margin: 0 0 30px 0;
-      }
-
-      .band-logo {
-        width: 60%;
-      }
-
-      nav {
-        margin-top: 15px;
-      }
-
-      nav img {
-        margin: 15px;
-        width: 30px;
-      }
-
-      .video {
-        margin: 0 auto;
-        width: 80vw;
-        height: calc(80vw / 1.7777777);
-      }
-
-      @media (min-width: 768px) {
-        section {
-          margin: 100px 0 200px 0;
-        }
-
-        nav img {
-          margin: 15px 30px;
-          width: 50px;
-        }
-
-        .video {
-          width: 50vw;
-          height: calc(50vw / 1.7777777);
-        }
-      }
-    `}</style>
+        <nav>
+          <MusicLink
+            href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A?si=t-KS0MCPQWWqpD7IZS8-zQ"
+            label="spotify"
+            icon="icon-spotify.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://itunes.apple.com/us/artist/left-alive/1073464999"
+            label="apple music"
+            icon="icon-applemusic.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://soundcloud.com/leftalive/"
+            label="soundcloud"
+            icon="icon-soundcloud.svg"
+          ></MusicLink>
+          <MusicLink
+            href="https://www.youtube.com/leftalive"
+            label="youtube"
+            icon="icon-youtube.svg"
+          ></MusicLink>
+        </nav>
+      </section>
+    </main>
   </Layout>
 );
 

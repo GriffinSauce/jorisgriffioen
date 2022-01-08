@@ -1,78 +1,47 @@
-import theme from '../theme';
+import { forwardRef } from 'react';
+import Link from 'next/link';
+
+const Anchor = forwardRef(({ children, ...props }, ref) => {
+  return (
+    <a
+      {...props}
+      ref={ref}
+      rel="noopener noreferrer"
+      className="flex-center flex-col gap-2 py-6 text-lg"
+    >
+      {children}
+    </a>
+  );
+});
+
+const Icon = ({ src, alt }) => <img className="w-8" alt={alt} src={src} />;
 
 const Links = () => (
   <>
-    <nav>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/GriffinSauce"
-      >
-        <img alt="github" src="icon-github.svg" />
+    <nav className="grid grid-cols-2 sm:grid-cols-3">
+      <Anchor target="_blank" href="https://github.com/GriffinSauce">
+        <Icon alt="github" src="icon-github.svg" />
         <div>Github</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://twitter.com/jorisgriffioen"
-      >
-        <img alt="twitter" src="icon-twitter.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://twitter.com/jorisgriffioen">
+        <Icon alt="twitter" src="icon-twitter.svg" />
         <div>Twitter</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://linkedin.com/in/jorisgriffioen/"
-      >
-        <img alt="linkedin" src="icon-linkedin.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
+        <Icon alt="linkedin" src="icon-linkedin.svg" />
         <div>LinkedIn</div>
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://instagram.com/jorisgriffioen"
-      >
-        <img alt="instagram" src="icon-instagram.svg" />
+      </Anchor>
+      <Anchor target="_blank" href="https://instagram.com/jorisgriffioen">
+        <Icon alt="instagram" src="icon-instagram.svg" />
         <div>Instagram</div>
-      </a>
+      </Anchor>
+      <Link href="/music">
+        <Anchor>
+          <Icon alt="music" src="icon-music.svg" />
+          <span>Music</span>
+        </Anchor>
+      </Link>
     </nav>
-    <style jsx>{`
-      nav {
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 300px;
-      }
-
-      a {
-        display: block;
-        margin: 0 0 20px 0;
-        padding: 20px 0;
-        flex-basis: calc(50% - 10px);
-        background-color: rgba(255, 255, 255, 0.05);
-        border: 1px solid ${theme.color4};
-        transition: box-shadow 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      a:hover {
-        box-shadow: inset 0 0 0 4px ${theme.color4};
-      }
-
-      a img {
-        width: 50px;
-        height: 50px;
-      }
-
-      @media (min-width: 992px) {
-        nav {
-          width: 600px;
-        }
-
-        a {
-          flex-basis: calc(25% - 15px);
-        }
-      }
-    `}</style>
   </>
 );
 
