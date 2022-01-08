@@ -65,7 +65,8 @@ const Home = () => (
         rel="noopener noreferrer"
         href="https://github.com/GriffinSauce/jorisgriffioen"
       >
-        <BsGithub className="inline-block" /> source
+        <BsGithub className="inline-block" />
+        <span> source</span>
       </a>
       <span> - artwork by Evelien Griffioen</span>
     </footer>

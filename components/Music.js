@@ -6,7 +6,7 @@ const MusicLink = ({ label, icon, href, children }) => (
     className="inline-block"
     target="_blank"
     rel="noopener noreferrer"
-    href="https://www.coralsprings.nl/"
+    href={href}
   >
     <img className="w-8 md:w-16 mx-4" alt={label} src={icon} />
   </a>
