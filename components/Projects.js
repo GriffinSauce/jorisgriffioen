@@ -74,6 +74,8 @@ const Projects = () => (
       tags={['professional', 'website', 'elearning', 'mobileapp']}
     />
 
+    <hr className="border-t-0 border-b border-gray-500 border-dashed" />
+
     <Project
       url="https://github.com/GriffinSauce/left-alive"
       name="leftalive.nl"
