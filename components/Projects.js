@@ -1,109 +1,140 @@
-const Tag = ({ id }) => {
-  const baseClasses =
-    'inline-block bg-white rounded text-sm text-black py-0.5 px-1.5';
-
-  if (id === 'module')
-    return <div className={[baseClasses, 'bg-blue-300'].join(' ')}>module</div>;
-  if (id === 'website')
-    return (
-      <div className={[baseClasses, 'bg-green-300'].join(' ')}>website</div>
-    );
-  if (id === 'webapp')
-    return (
-      <div className={[baseClasses, 'bg-green-300'].join(' ')}>web app</div>
-    );
-  if (id === 'extension')
-    return (
-      <div className={[baseClasses, 'bg-yellow-300'].join(' ')}>extension</div>
-    );
-  if (id === 'tooling')
-    return (
-      <div className={[baseClasses, 'bg-orange-300'].join(' ')}>tooling</div>
-    );
-  if (id === 'wip')
-    return (
-      <div className={[baseClasses, 'bg-gray-500'].join(' ')}>
-        work in progress
-      </div>
-    );
-  return null;
-};
+import ProjectTag from './ProjectTag';
 
 const Project = ({ url, name, description, tags = [] }) => (
   <a className="grid gap-1 text-left" href={url}>
-    <div className="text-xl">{name}</div>
+    <div className="text-2xl">{name}</div>
     <div className="space-x-1">
       {tags.map((tag) => (
-        <Tag key={tag} id={tag} />
+        <ProjectTag key={tag} id={tag} />
       ))}
     </div>
-    <div className="font-light">{description}</div>
+    <div className="text-lg font-light">{description}</div>
   </a>
 );
 
 const Projects = () => (
   <div className="grid gap-6">
     <Project
+      url="https://www.findhotel.net"
+      name={
+        <>
+          FindHotel
+          <span className="ml-3 text-sm text-gray-300">
+            (Jun 2020 - Present)
+          </span>
+        </>
+      }
+      description={
+        <>
+          Find the right hotel at the best price.
+          <br />
+          Senior Engineer -> Engineering Lead
+        </>
+      }
+      tags={['professional', 'webapp']}
+    />
+
+    <Project
+      url="https://www.peerby.com"
+      name={
+        <>
+          Peerby
+          <span className="ml-3 text-sm text-gray-300">
+            (May 2015 - May 2020)
+          </span>
+        </>
+      }
+      description={
+        <>
+          Borrow and rent things from people nearby.
+          <br />
+          Engineer -> CTO
+        </>
+      }
+      tags={['professional', 'webapp', 'mobileapp']}
+    />
+
+    <Project
+      url="https://www.plusport.com"
+      name={
+        <>
+          Plusport
+          <span className="ml-3 text-sm text-gray-300">
+            (May 2010 - Apr 2015)
+          </span>
+        </>
+      }
+      description={
+        <>
+          E-learning and compliance management
+          <br />
+          Interaction Designer / Engineer
+        </>
+      }
+      tags={['professional', 'website', 'elearning', 'mobileapp']}
+    />
+
+    <Project
       url="https://github.com/GriffinSauce/left-alive"
       name="leftalive.nl"
-      description="The website of Left Alive"
-      tags={['website']}
+      description="A simple website for my pop punk band Left Alive."
+      tags={['personal', 'website']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/noise.cat"
-      name="noise.cat"
+      name="Noise.cat"
       description="Your band home - plan shows, navigation hints, share demo's and important links"
-      tags={['webapp']}
+      tags={['personal', 'webapp']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/subsmarine"
-      name="subsmarine.app"
+      name="Subsmarine"
       description="A newsletter reading app"
-      tags={['webapp']}
+      tags={['personal', 'webapp']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/pico"
-      name="pico"
+      name="Pico"
       description="Gather high quality media from events with zero friction"
-      tags={['webapp', 'wip']}
+      tags={['personal', 'webapp', 'wip']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/morningstar-web-editor-plus"
       name="morningstar-web-editor-plus"
       description="Chrome extension with mods and additions to the Morningstar Web Editor"
-      tags={['extension']}
+      tags={['personal', 'extension']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/tailshake"
       name="tailshake"
       description="Tailshake combines TailwindCSS classes and shakes off any conflicts"
-      tags={['module']}
+      tags={['personal', 'module']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/next-starter"
       name="next-starter"
       description="An opinionated starter kit for Next.js apps"
-      tags={['tooling']}
+      tags={['personal', 'tooling']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/reaper-project-parser"
       name="reaper-project-parser"
       description="A Reaper DAW project parser written in TypeScript - parse RPP files in JS"
-      tags={['module', 'wip']}
+      tags={['personal', 'module', 'wip']}
     />
 
     <Project
       url="https://github.com/GriffinSauce/luft"
       name="luft"
       description="An extremely simple Airtable client for JavaScript."
-      tags={['module']}
+      tags={['personal', 'module']}
     />
   </div>
 );
