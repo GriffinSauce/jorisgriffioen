@@ -13,7 +13,7 @@ const MusicLink = ({ label, icon, href, children }) => (
 );
 
 const Music = () => (
-  <>
+  <div className="grid gap-16">
     <section className="grid gap-6">
       <h3>
         <a
@@ -23,14 +23,14 @@ const Music = () => (
           href="https://www.coralsprings.nl/"
         >
           <img
-            className="inline-block w-2/3"
+            className="inline-block w-5/6"
             alt="Coral Springs"
             src="logo-coralsprings.svg"
           />
         </a>
       </h3>
 
-      <div className="mx-auto aspect-video w-[80vw]">
+      <div className="w-full aspect-video">
         <YouTube videoId="VJzLCTPIfGc" />
       </div>
 
@@ -67,14 +67,14 @@ const Music = () => (
           href="https://www.leftalive.nl/"
         >
           <img
-            className="inline-block w-2/3"
+            className="inline-block w-5/6"
             alt="Left Alive"
             src="logo-leftalive.svg"
           />
         </a>
       </h3>
 
-      <div className="mx-auto aspect-video w-[80vw]">
+      <div className="w-full aspect-video">
         <YouTube videoId="ypjM2_CkeXs" />
       </div>
 
@@ -101,7 +101,7 @@ const Music = () => (
         ></MusicLink>
       </nav>
     </section>
-  </>
+  </div>
 );
 
 export default Music;

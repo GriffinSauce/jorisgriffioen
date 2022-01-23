@@ -7,6 +7,20 @@ import Links from '../components/Links';
 import Music from '../components/Music';
 import Projects from '../components/Projects';
 
+const Container = ({ children }) => (
+  <div className="w-[80vw] mx-auto">{children}</div>
+);
+
+const SubHeader = ({ id, children }) => (
+  <h2 id={id} className="text-left border-b-2">
+    <Container>
+      <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
+        {children}
+      </div>
+    </Container>
+  </h2>
+);
+
 const Home = () => (
   <Layout>
     <header>
@@ -36,29 +50,19 @@ const Home = () => (
     </section>
 
     <section className="grid gap-16 mt-12 text-center sm:gap-20 ">
-      <h2 id="music" className="text-left border-b-2">
-        <div className="w-[80vw] mx-auto">
-          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
-            Music
-          </div>
-        </div>
-      </h2>
+      <SubHeader id="music">Music</SubHeader>
 
-      <Music />
+      <Container>
+        <Music />
+      </Container>
     </section>
 
     <section className="grid gap-8 mt-12 text-center sm:gap-8 ">
-      <h2 id="projects" className="text-left border-b-2">
-        <div className="w-[80vw] mx-auto">
-          <div className="inline-block px-3 pb-1 text-black -skew-x-3 bg-white">
-            Projects
-          </div>
-        </div>
-      </h2>
+      <SubHeader id="projects">Projects</SubHeader>
 
-      <div className="w-[80vw] mx-auto">
+      <Container>
         <Projects />
-      </div>
+      </Container>
     </section>
 
     <footer className="py-6 text-sm text-center text-gray-600">
