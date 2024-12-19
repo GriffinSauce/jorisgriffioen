@@ -1,6 +1,16 @@
-import ProjectTag from './ProjectTag';
+import ProjectTag, { type TagId } from './ProjectTag';
 
-const Project = ({ url, name, description, tags = [] }) => (
+const Project = ({
+  url,
+  name,
+  description,
+  tags = [],
+}: {
+  url: string;
+  name: React.ReactNode;
+  description: React.ReactNode;
+  tags: TagId[];
+}) => (
   <a className="grid gap-1 text-left" href={url}>
     <div className="text-2xl">{name}</div>
     <div className="space-x-1">
@@ -18,7 +28,7 @@ const Projects = () => (
       url="https://www.findhotel.net"
       name={
         <>
-          FindHotel
+          Vio.com
           <span className="ml-3 text-sm text-gray-300">
             (Jun 2020 - Present)
           </span>
@@ -28,10 +38,11 @@ const Projects = () => (
         <>
           Find the right hotel at the best price.
           <br />
-          Senior Engineer -> Engineering Lead
+          Senior Engineer &rarr; Engineering Lead &rarr; Tech Lead &rarr; Staff
+          Engineer
         </>
       }
-      tags={['professional', 'webapp']}
+      tags={['professional', 'webapp', 'mobileapp', 'tooling']}
     />
 
     <Project
@@ -48,7 +59,7 @@ const Projects = () => (
         <>
           Borrow and rent things from people nearby.
           <br />
-          Engineer -> CTO
+          Engineer &rarr; CTO
         </>
       }
       tags={['professional', 'webapp', 'mobileapp']}

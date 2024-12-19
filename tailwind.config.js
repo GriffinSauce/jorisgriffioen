@@ -1,5 +1,12 @@
+const colors = require('tailwindcss/colors');
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./components/**/*.js', './pages/**/*.js'],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -16,6 +23,12 @@ module.exports = {
         secondary: ['Montserrat', 'sans-serif'],
       },
       colors: {
+        // TODO: rename these aliases
+        gray: colors.slate,
+        green: colors.emerald,
+        purple: colors.violet,
+        yellow: colors.amber,
+        pink: colors.fuchsia,
         primary: {
           500: '#007d8a',
         },
@@ -58,8 +71,4 @@ module.exports = {
     borderColor: ['hover'],
   },
   plugins: [],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
 };

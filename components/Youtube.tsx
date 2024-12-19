@@ -1,6 +1,7 @@
+'use client';
 import { useState } from 'react';
 
-const Youtube = ({ title, videoId }) => {
+const Youtube = ({ title = '', videoId }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <>

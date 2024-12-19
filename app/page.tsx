@@ -1,7 +1,5 @@
 import { BsGithub } from 'react-icons/bs';
-import Link from 'next/link';
 import Image from 'next/image';
-import Layout from '../components/Layout';
 import Logo from '../components/Logo';
 import Links from '../components/Links';
 import Music from '../components/Music';
@@ -22,7 +20,7 @@ const SubHeader = ({ id, children }) => (
 );
 
 const Home = () => (
-  <Layout>
+  <>
     <header>
       <div className="gap-3 py-6 bg-black flex-center">
         <Logo width={80} />
@@ -35,11 +33,15 @@ const Home = () => (
       <Image
         src="/hero.jpg"
         alt="On stage with Left Alive"
-        layout="responsive"
         width={600}
         height={400}
         quality={90}
         priority
+        sizes="100vw"
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
       />
     </header>
 
@@ -76,7 +78,7 @@ const Home = () => (
       </a>
       <span> - artwork by Evelien Griffioen</span>
     </footer>
-  </Layout>
+  </>
 );
 
 export default Home;

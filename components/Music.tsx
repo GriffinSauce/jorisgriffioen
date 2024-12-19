@@ -1,13 +1,21 @@
-import Link from 'next/link';
 import YouTube from '../components/Youtube';
 
-const MusicLink = ({ label, icon, href, children }) => (
+const MusicLink = ({
+  label,
+  icon,
+  href,
+}: {
+  label: string;
+  icon: `${string}.svg`;
+  href: string;
+}) => (
   <a
     className="inline-block"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
   >
+    {/* eslint-disable-next-line @next/next/no-img-element */}
     <img className="w-8 mx-4 md:w-14" alt={label} src={icon} />
   </a>
 );
@@ -22,6 +30,7 @@ const Music = () => (
           rel="noopener noreferrer"
           href="https://www.coralsprings.nl/"
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="inline-block w-5/6"
             alt="Coral Springs"
@@ -37,22 +46,22 @@ const Music = () => (
       <nav>
         <MusicLink
           href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
-          description="spotify"
+          label="spotify"
           icon="icon-spotify.svg"
         ></MusicLink>
         <MusicLink
           href="https://music.apple.com/us/artist/coral-springs/348189917"
-          description="apple music"
+          label="apple music"
           icon="icon-applemusic.svg"
         ></MusicLink>
         <MusicLink
           href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
-          description="bandcamp"
+          label="bandcamp"
           icon="icon-bandcamp.svg"
         ></MusicLink>
         <MusicLink
           href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
-          description="physical media"
+          label="physical media"
           icon="icon-vinyl.svg"
         ></MusicLink>
       </nav>
@@ -66,6 +75,7 @@ const Music = () => (
           rel="noopener noreferrer"
           href="https://www.leftalive.nl/"
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="inline-block w-5/6"
             alt="Left Alive"
