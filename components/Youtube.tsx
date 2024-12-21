@@ -20,7 +20,7 @@ export const Youtube = ({
   title = '',
   videoId,
 }: {
-  title: string;
+  title?: string;
   videoId: VideoId;
 }) => {
   const [loaded, setLoaded] = useState(false);
