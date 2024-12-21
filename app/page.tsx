@@ -66,7 +66,7 @@ const Home = () => (
       </Container>
     </section>
 
-    <footer className="py-6 text-sm text-center text-gray-600">
+    <footer className="py-6 text-sm text-center text-gray-400">
       <a
         target="_blank"
         rel="noopener noreferrer"

@@ -30,7 +30,7 @@ const tag = tv({
       elearning: 'bg-violet-300',
       extension: 'bg-yellow-300',
       tooling: 'bg-orange-300',
-      wip: 'bg-gray-500',
+      wip: 'bg-gray-400',
     } satisfies Record<TagId, string>,
   },
 });
