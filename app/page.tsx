@@ -1,9 +1,10 @@
 import { BsGithub } from 'react-icons/bs';
 import Image from 'next/image';
-import Logo from '../components/Logo';
-import Links from '../components/Links';
-import Music from '../components/Music';
-import Projects from '../components/Projects';
+import { Logo } from '../components/Logo';
+import { Links } from '../components/Links';
+import { Music } from '../components/Music/Music';
+import { Projects } from '../components/Projects';
+import heroImage from './hero.jpg';
 
 const Container = ({ children }) => (
   <div className="w-[80vw] mx-auto">{children}</div>
@@ -31,10 +32,8 @@ const Home = () => (
       </div>
 
       <Image
-        src="/hero.jpg"
+        src={heroImage}
         alt="On stage with Left Alive"
-        width={600}
-        height={400}
         quality={90}
         priority
         sizes="100vw"

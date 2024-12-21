@@ -1,26 +1,10 @@
-import YouTube from '../components/Youtube';
+import logoCoralsprings from './images/logo-coralsprings.svg';
+import logoLeftalive from './images/logo-leftalive.svg';
+import Image from 'next/image';
+import { Youtube } from '../Youtube';
+import { MusicLink } from './MusicLink';
 
-const MusicLink = ({
-  label,
-  icon,
-  href,
-}: {
-  label: string;
-  icon: `${string}.svg`;
-  href: string;
-}) => (
-  <a
-    className="inline-block"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img className="w-8 mx-4 md:w-14" alt={label} src={icon} />
-  </a>
-);
-
-const Music = () => (
+export const Music = () => (
   <div className="grid gap-16">
     <section className="grid gap-6">
       <h3>
@@ -30,39 +14,38 @@ const Music = () => (
           rel="noopener noreferrer"
           href="https://www.coralsprings.nl/"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             className="inline-block w-5/6"
             alt="Coral Springs"
-            src="logo-coralsprings.svg"
+            src={logoCoralsprings}
           />
         </a>
       </h3>
 
       <div className="w-full aspect-video">
-        <YouTube videoId="VJzLCTPIfGc" />
+        <Youtube videoId="VJzLCTPIfGc" />
+      </div>
+
+      <div className="w-full aspect-video">
+        <Youtube videoId="PLFEluGiZuE" />
       </div>
 
       <nav>
         <MusicLink
           href="https://open.spotify.com/artist/4KJW2C933rpf1mlOZTFWXe"
-          label="spotify"
-          icon="icon-spotify.svg"
+          type="spotify"
         ></MusicLink>
         <MusicLink
           href="https://music.apple.com/us/artist/coral-springs/348189917"
-          label="apple music"
-          icon="icon-applemusic.svg"
+          type="appleMusic"
         ></MusicLink>
         <MusicLink
           href="https://coralsprings.bandcamp.com/album/always-lost-never-found"
-          label="bandcamp"
-          icon="icon-bandcamp.svg"
+          type="bandcamp"
         ></MusicLink>
         <MusicLink
           href="https://www.coralsprings.nl/post/183493206188/always-lost-never-found-out-now"
-          label="physical media"
-          icon="icon-vinyl.svg"
+          type="vinyl"
         ></MusicLink>
       </nav>
     </section>
@@ -75,43 +58,36 @@ const Music = () => (
           rel="noopener noreferrer"
           href="https://www.leftalive.nl/"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             className="inline-block w-5/6"
             alt="Left Alive"
-            src="logo-leftalive.svg"
+            src={logoLeftalive}
           />
         </a>
       </h3>
 
       <div className="w-full aspect-video">
-        <YouTube videoId="ypjM2_CkeXs" />
+        <Youtube videoId="ypjM2_CkeXs" />
       </div>
 
       <nav>
         <MusicLink
           href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A?si=t-KS0MCPQWWqpD7IZS8-zQ"
-          label="spotify"
-          icon="icon-spotify.svg"
+          type="spotify"
         ></MusicLink>
         <MusicLink
           href="https://itunes.apple.com/us/artist/left-alive/1073464999"
-          label="apple music"
-          icon="icon-applemusic.svg"
+          type="appleMusic"
         ></MusicLink>
         <MusicLink
           href="https://soundcloud.com/leftalive/"
-          label="soundcloud"
-          icon="icon-soundcloud.svg"
+          type="soundcloud"
         ></MusicLink>
         <MusicLink
           href="https://www.youtube.com/leftalive"
-          label="youtube"
-          icon="icon-youtube.svg"
+          type="youtube"
         ></MusicLink>
       </nav>
     </section>
   </div>
 );
-
-export default Music;

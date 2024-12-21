@@ -2,17 +2,11 @@
 
 html,
 body {
-  @apply  w-full min-h-full bg-black;
+  @apply w-full min-h-full bg-black;
 }
 
 body {
   @apply font-primary  text-white;
-
-  /* background: linear-gradient(
-    135deg,
-    ${darken(0.35, theme.color5)},
-    ${darken(0.4, theme.color1)}
-  ); */
 }
 
 html {
@@ -64,7 +58,6 @@ h6,
 .flex-center {
   @apply flex items-center justify-center;
 }
-
 
 @tailwind components;
 @tailwind utilities;

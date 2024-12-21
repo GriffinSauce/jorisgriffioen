@@ -1,7 +1,28 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 
-const Youtube = ({ title = '', videoId }) => {
+/**
+ * Placeholder can be found at:
+ * https://img.youtube.com/vi/<videoid>/maxresdefault.jpg (or /hqdefault.jpg)
+ *
+ * Copy to `/public/youtube/<videoid.jpg` for better perf & quality
+ */
+const imageSizes = {
+  PLFEluGiZuE: { width: 1280, height: 720 },
+  VJzLCTPIfGc: { width: 1280, height: 720 },
+  ypjM2_CkeXs: { width: 480, height: 360 },
+};
+
+type VideoId = keyof typeof imageSizes;
+
+export const Youtube = ({
+  title = '',
+  videoId,
+}: {
+  title: string;
+  videoId: VideoId;
+}) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <>
@@ -22,12 +43,17 @@ const Youtube = ({ title = '', videoId }) => {
             type="button"
             aria-label="Load and play Youtube video"
             onClick={() => setLoaded(true)}
-            style={{
-              backgroundImage: `url("https://img.youtube.com/vi/${videoId}/0.jpg")`,
-            }}
           >
+            <Image
+              className="absolute inset-0"
+              alt="Play video on youtube"
+              src={`/youtube/${videoId}.jpg`}
+              width={imageSizes[videoId].width}
+              height={imageSizes[videoId].height}
+              layout="cover"
+            />
             <svg
-              className="w-[68px] h-[48px]"
+              className="w-[68px] h-[48px] z-10"
               version="1.1"
               viewBox="0 0 68 48"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,4 +71,3 @@ const Youtube = ({ title = '', videoId }) => {
     </>
   );
 };
-export default Youtube;

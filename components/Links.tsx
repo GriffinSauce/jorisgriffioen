@@ -1,9 +1,4 @@
-import {
-  BsMusicNoteBeamed,
-  BsInstagram,
-  BsTwitter,
-  BsGithub,
-} from 'react-icons/bs';
+import { BsMusicNoteBeamed, BsInstagram, BsGithub } from 'react-icons/bs';
 import { FaLinkedin } from 'react-icons/fa';
 import { GoTools } from 'react-icons/go';
 
@@ -17,15 +12,11 @@ const Anchor = ({ children, ...props }) => (
   </a>
 );
 
-const Links = () => (
-  <nav className="grid grid-cols-3 sm:grid-cols-6">
+export const Links = () => (
+  <nav className="grid grid-cols-3 sm:grid-cols-5">
     <Anchor target="_blank" href="https://github.com/GriffinSauce">
       <BsGithub className="text-3xl" />
       <span>Github</span>
-    </Anchor>
-    <Anchor target="_blank" href="https://twitter.com/jorisgriffioen">
-      <BsTwitter className="text-3xl" />
-      <span>Twitter</span>
     </Anchor>
     <Anchor target="_blank" href="https://linkedin.com/in/jorisgriffioen/">
       <FaLinkedin className="text-3xl" />
@@ -45,5 +36,3 @@ const Links = () => (
     </Anchor>
   </nav>
 );
-
-export default Links;

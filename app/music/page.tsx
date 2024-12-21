@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Logo from '../../components/Logo';
-import Music from '../../components/Music';
+import { Logo } from '../../components/Logo';
+import { Music } from '../../components/Music/Music';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

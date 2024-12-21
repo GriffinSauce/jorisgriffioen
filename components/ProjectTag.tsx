@@ -35,10 +35,8 @@ const tag = tv({
   },
 });
 
-const ProjectTag = ({ id }: { id: TagId }) => {
+export const ProjectTag = ({ id }: { id: TagId }) => {
   if (!tagIds.has(id)) return null;
 
   return <div className={tag({ id })}>{tagNames[id]}</div>;
 };
-
-export default ProjectTag;

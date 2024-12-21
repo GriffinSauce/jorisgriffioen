@@ -1,4 +1,4 @@
-import ProjectTag, { type TagId } from './ProjectTag';
+import { ProjectTag, type TagId } from './ProjectTag';
 
 const Project = ({
   url,
@@ -22,7 +22,7 @@ const Project = ({
   </a>
 );
 
-const Projects = () => (
+export const Projects = () => (
   <div className="grid gap-6">
     <Project
       url="https://www.findhotel.net"
@@ -151,5 +151,3 @@ const Projects = () => (
     />
   </div>
 );
-
-export default Projects;
