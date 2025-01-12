@@ -31,7 +31,7 @@ export const Youtube = ({
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             title={title}
-            src={`https://www.youtube.com/embed/${videoId}?rel=0&amp;showinfo=0&autoplay=1`}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&amp;showinfo=0`}
             width="560"
             height="315"
             frameBorder="0"
