@@ -15,7 +15,7 @@ export const Music = () => (
           href="https://www.coralsprings.nl/"
         >
           <Image
-            className="inline-block w-5/6"
+            className="inline-block w-5/6 max-w-full h-auto"
             alt="Coral Springs"
             src={logoCoralsprings}
           />
@@ -59,7 +59,7 @@ export const Music = () => (
           href="https://www.leftalive.nl/"
         >
           <Image
-            className="inline-block w-5/6"
+            className="inline-block w-5/6 max-w-full h-auto"
             alt="Left Alive"
             src={logoLeftalive}
           />

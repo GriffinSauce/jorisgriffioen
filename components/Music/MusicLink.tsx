@@ -47,7 +47,7 @@ export const MusicLink = ({
     href={href}
   >
     <Image
-      className="w-8 mx-4 md:w-14"
+      className="w-8 mx-4 md:w-14 max-w-full h-auto"
       alt={linkTypes[type].label}
       src={linkTypes[type].icon}
     />

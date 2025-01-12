@@ -50,7 +50,6 @@ export const Youtube = ({
               src={`/youtube/${videoId}.jpg`}
               width={imageSizes[videoId].width}
               height={imageSizes[videoId].height}
-              layout="cover"
             />
             <svg
               className="w-[68px] h-[48px] z-10"

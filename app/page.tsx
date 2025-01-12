@@ -32,15 +32,12 @@ const Home = () => (
       </div>
 
       <Image
+        className="w-full max-w-full h-auto"
         src={heroImage}
         alt="On stage with Left Alive"
         quality={90}
         priority
         sizes="100vw"
-        style={{
-          width: '100%',
-          height: 'auto',
-        }}
       />
     </header>
 
