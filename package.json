@@ -5,6 +5,7 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
+    "nanoid": "^5.0.9",
     "next": "^15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -23,6 +24,7 @@
     "@next/bundle-analyzer": "^15.1.4",
     "@types/node": "22.10.5",
     "@types/react": "19.0.5",
+    "@types/youtube": "^0.1.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-next": "15.1.4",

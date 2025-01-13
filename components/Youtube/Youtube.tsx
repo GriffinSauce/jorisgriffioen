@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useId, useState } from 'react';
+import { loadYoutubeVideo } from './youtubeApi';
 
 /**
  * Placeholder can be found at:
@@ -16,33 +17,36 @@ const imageSizes = {
 
 type VideoId = keyof typeof imageSizes;
 
-export const Youtube = ({
-  title = '',
-  videoId,
-}: {
-  title?: string;
-  videoId: VideoId;
-}) => {
-  const [loaded, setLoaded] = useState(false);
+export const Youtube = ({ videoId }: { videoId: VideoId }) => {
+  const id = useId();
+  const [isReady, setIsReady] = useState(false);
+
+  const loadVideo = () => {
+    // Load youtube embed in the click handler so we're allowed to autoplay it on mobile
+    loadYoutubeVideo({
+      elementId: id,
+      videoId,
+      height: 315,
+      width: 560,
+      onReady: (event) => {
+        event.target.playVideo();
+        setIsReady(true);
+      },
+    });
+  };
+
   return (
     <>
       <div className="relative h-0 pb-[56%]">
-        {loaded ? (
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            title={title}
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&amp;showinfo=0`}
-            width="560"
-            height="315"
-            frameBorder="0"
-            allowFullScreen
-          />
-        ) : (
+        {/* will be replaced with embed iframe */}
+        <div id={id} className="absolute top-0 left-0 w-full h-full" />
+
+        {isReady ? null : (
           <button
             className="group absolute top-0 left-0 flex items-center justify-center w-full h-full bg-center bg-cover"
             type="button"
             aria-label="Load and play Youtube video"
-            onClick={() => setLoaded(true)}
+            onClick={loadVideo}
           >
             <Image
               className="absolute inset-0"

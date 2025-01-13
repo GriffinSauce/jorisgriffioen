@@ -1,7 +1,7 @@
 import logoCoralsprings from './images/logo-coralsprings.svg';
 import logoLeftalive from './images/logo-leftalive.svg';
 import Image from 'next/image';
-import { Youtube } from '../Youtube';
+import { Youtube } from '../Youtube/Youtube';
 import { MusicLink } from './MusicLink';
 
 export const Music = () => (

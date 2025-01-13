@@ -605,6 +605,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/youtube@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@types/youtube@npm:0.1.0"
+  checksum: 10c0/2629187927d26699da6f9499cc73bb70fc3ccf8075c8428ca801a062e64c31d50b3baf188ef8514e294ca15455ee2e06903425535475eb0cb106a36a19a08aaf
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
   version: 8.19.1
   resolution: "@typescript-eslint/eslint-plugin@npm:8.19.1"
@@ -2683,9 +2690,11 @@ __metadata:
     "@next/bundle-analyzer": "npm:^15.1.4"
     "@types/node": "npm:22.10.5"
     "@types/react": "npm:19.0.5"
+    "@types/youtube": "npm:^0.1.0"
     autoprefixer: "npm:^10.4.20"
     eslint: "npm:^9.18.0"
     eslint-config-next: "npm:15.1.4"
+    nanoid: "npm:^5.0.9"
     next: "npm:^15.1.4"
     postcss: "npm:^8.4.49"
     react: "npm:^19.0.0"
@@ -3034,6 +3043,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10c0/4b1bb29f6cfebf3be3bc4ad1f1296fb0a10a3043a79f34fbffe75d1621b4318319211cd420549459018ea3592f0d2f159247a6f874911d6d26eaaadda2478120
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^5.0.9":
+  version: 5.0.9
+  resolution: "nanoid@npm:5.0.9"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 10c0/a2d9710525d4998a8a1610bbe6eb9a92c254ebab7c567c1ab429046fe7eed9c4df3508b59fb44c58ffdc98edb28dd6f953715c14b64ea0a3a2ce37420cdfeefd
   languageName: node
   linkType: hard
 
