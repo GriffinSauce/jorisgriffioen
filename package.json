@@ -5,6 +5,7 @@
   "author": "Joris Griffioen",
   "license": "MIT",
   "dependencies": {
+    "client-only": "^0.0.1",
     "nanoid": "^5.0.9",
     "next": "^15.1.4",
     "react": "^19.0.0",
